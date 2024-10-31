@@ -1,15 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b837c1-88fc-4723-a790-86c45fa97d5a" name="Changes" comment="" />
+    <list default="true" id="f5b837c1-88fc-4723-a790-86c45fa97d5a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mirea/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mirea/pkmn/AttackSkill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mirea/pkmn/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mirea/pkmn/EnergyType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mirea/pkmn/PokemonStage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mirea/pkmn/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mirea/pkmn/zininavo/CardImport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Corvisquire.crd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/AttackSkill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/Card.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/CardImport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/EnergyType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/PkmnApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mirea/pkmn/zininavo/PkmnApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/PokemonStage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/my_card.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/my_card.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;noermoan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/noermoan/Pkmn.git&quot;,
+    &quot;accountId&quot;: &quot;ac6ded97-3e7b-41d1-b286-0674be8a9ed7&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2nOFYCZNvmgopluJvqNzKLmy90f" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -18,11 +63,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CardImport.executor": "Run",
+    "Application.PkmnApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/zinin/IdeaProjects/Pkmn/src/main/java/ru/mirea/zininavo/Main.java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zinin\IdeaProjects\Pkmn\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.mirea.pkmn" />
+      <recent name="" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -34,15 +91,8 @@
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>

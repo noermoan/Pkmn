@@ -1,0 +1,809 @@
+Index: src/main/java/ru/mirea/zininavo/pkmn/AttackSkill.java
+===================================================================
+diff --git a/src/main/java/ru/mirea/zininavo/pkmn/AttackSkill.java b/src/main/java/ru/mirea/zininavo/pkmn/AttackSkill.java
+deleted file mode 100644
+--- a/src/main/java/ru/mirea/zininavo/pkmn/AttackSkill.java	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ /dev/null	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
+@@ -1,4 +0,0 @@
+-package ru.mirea.zininavo.pkmn;
+-
+-public class AttackSkill {
+-}
+Index: src/main/java/ru/mirea/zininavo/pkmn/Card.java
+===================================================================
+diff --git a/src/main/java/ru/mirea/zininavo/pkmn/Card.java b/src/main/java/ru/mirea/zininavo/pkmn/Card.java
+deleted file mode 100644
+--- a/src/main/java/ru/mirea/zininavo/pkmn/Card.java	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ /dev/null	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
+@@ -1,4 +0,0 @@
+-package ru.mirea.zininavo.pkmn;
+-
+-public class Card {
+-}
+Index: src/main/java/ru/mirea/zininavo/pkmn/CardImport.java
+===================================================================
+diff --git a/src/main/java/ru/mirea/zininavo/pkmn/CardImport.java b/src/main/java/ru/mirea/zininavo/pkmn/CardImport.java
+deleted file mode 100644
+--- a/src/main/java/ru/mirea/zininavo/pkmn/CardImport.java	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ /dev/null	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
+@@ -1,4 +0,0 @@
+-package ru.mirea.zininavo.pkmn;
+-
+-public class CardImport {
+-}
+Index: src/main/java/ru/mirea/zininavo/pkmn/EnergyType.java
+===================================================================
+diff --git a/src/main/java/ru/mirea/zininavo/pkmn/EnergyType.java b/src/main/java/ru/mirea/zininavo/pkmn/EnergyType.java
+deleted file mode 100644
+--- a/src/main/java/ru/mirea/zininavo/pkmn/EnergyType.java	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ /dev/null	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
+@@ -1,4 +0,0 @@
+-package ru.mirea.zininavo.pkmn;
+-
+-public enum EnergyType {
+-}
+Index: src/main/java/ru/mirea/zininavo/pkmn/PkmnApplication.java
+===================================================================
+diff --git a/src/main/java/ru/mirea/zininavo/pkmn/PkmnApplication.java b/src/main/java/ru/mirea/zininavo/pkmn/PkmnApplication.java
+deleted file mode 100644
+--- a/src/main/java/ru/mirea/zininavo/pkmn/PkmnApplication.java	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ /dev/null	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
+@@ -1,4 +0,0 @@
+-package ru.mirea.zininavo.pkmn;
+-
+-public class PkmnApplication {
+-}
+Index: src/main/java/ru/mirea/zininavo/pkmn/PokemonStage.java
+===================================================================
+diff --git a/src/main/java/ru/mirea/zininavo/pkmn/PokemonStage.java b/src/main/java/ru/mirea/zininavo/pkmn/PokemonStage.java
+deleted file mode 100644
+--- a/src/main/java/ru/mirea/zininavo/pkmn/PokemonStage.java	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ /dev/null	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
+@@ -1,4 +0,0 @@
+-package ru.mirea.zininavo.pkmn;
+-
+-public enum PokemonStage {
+-}
+Index: src/main/java/ru/mirea/zininavo/pkmn/Student.java
+===================================================================
+diff --git a/src/main/java/ru/mirea/zininavo/pkmn/Student.java b/src/main/java/ru/mirea/zininavo/pkmn/Student.java
+deleted file mode 100644
+--- a/src/main/java/ru/mirea/zininavo/pkmn/Student.java	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ /dev/null	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
+@@ -1,4 +0,0 @@
+-package ru.mirea.zininavo.pkmn;
+-
+-public class Student {
+-}
+Index: src/main/java/AttackSkill.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/AttackSkill.java b/src/main/java/AttackSkill.java
+new file mode 100644
+--- /dev/null	(date 1729166534661)
++++ b/src/main/java/AttackSkill.java	(date 1729166534661)
+@@ -0,0 +1,38 @@
++import java.util.ArrayList;
++import java.util.List;
++
++public class AttackSkill {
++    private String name;
++    private String description;
++    private Integer cost; // Изменено на Integer
++    private Integer damage;
++
++    private List<AttackSkill> attacks; // Список для хранения атак
++
++    public AttackSkill(String name, String description, Integer cost, Integer damage) {
++        this.name = name;
++        this.description = description;
++        this.cost = cost;
++        this.damage = damage;
++        this.attacks = new ArrayList<>(); // Инициализация списка
++    }
++
++    public AttackSkill() {
++        this.attacks = new ArrayList<>(); // Инициализация списка
++    }
++
++    public AttackSkill(String name, String description, int cost, int damage) {
++        this.name = name;
++        this.description = description;
++        this.cost = cost;
++        this.damage = damage;
++    }
++
++    @Override
++    public String toString() {
++        return "AttackSkill{" + "name=" + name +
++                ",  cost=" + cost +
++                ", damage=" + damage +
++                '}';
++    }
++}
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>ru.mirea.zininavo</groupId>\r\n    <artifactId>Pkmn</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n\r\n    <properties>\r\n        <maven.compiler.source>21</maven.compiler.source>\r\n        <maven.compiler.target>21</maven.compiler.target>\r\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n    </properties>\r\n\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ b/pom.xml	(date 1729087921056)
+@@ -13,5 +13,18 @@
+         <maven.compiler.target>21</maven.compiler.target>
+         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     </properties>
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-compiler-plugin</artifactId>
++                <configuration>
++                    <source>21</source>
++                    <target>21</target>
++                    <compilerArgs>--enable-preview</compilerArgs>
++                </configuration>
++            </plugin>
++        </plugins>
++    </build>
+ 
+ </project>
+\ No newline at end of file
+Index: src/main/java/PkmnApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/PkmnApplication.java b/src/main/java/PkmnApplication.java
+new file mode 100644
+--- /dev/null	(date 1729166534643)
++++ b/src/main/java/PkmnApplication.java	(date 1729166534643)
+@@ -0,0 +1,3 @@
++public void main() {
++
++}
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"graalvm-jdk-21\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ b/.idea/misc.xml	(date 1728836941740)
+@@ -1,6 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
+   <component name="ProjectRootManager" version="2" project-jdk-name="graalvm-jdk-21" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+Index: src/main/java/ru/mirea/zininavo/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/mirea/zininavo/Main.java b/src/main/java/ru/mirea/Main.java
+rename from src/main/java/ru/mirea/zininavo/Main.java
+rename to src/main/java/ru/mirea/Main.java
+--- a/src/main/java/ru/mirea/zininavo/Main.java	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ b/src/main/java/ru/mirea/Main.java	(date 1729166534544)
+@@ -1,4 +1,4 @@
+-package ru.mirea.zininavo;
++package ru.mirea;
+ 
+ //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+ // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+Index: src/main/java/Student.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Student.java b/src/main/java/Student.java
+new file mode 100644
+--- /dev/null	(date 1729166534614)
++++ b/src/main/java/Student.java	(date 1729166534614)
+@@ -0,0 +1,48 @@
++public class Student {
++    String firstName;
++    String surName;
++    String familyName;
++    String group;
++
++    public Student(String firstName, String surName, String familyName, String group) {
++        this.firstName = firstName;
++        this.surName = surName;
++        this.familyName = familyName;
++        this.group = group;
++    }
++
++    public Student() {
++    }
++
++    public String getFirstName() {
++        return firstName;
++    }
++
++    public void setFirstName(String firstName) {
++        this.firstName = firstName;
++    }
++
++    public String getGroup() {
++        return group;
++    }
++
++    public void setGroup(String group) {
++        this.group = group;
++    }
++
++    public String getSurName() {
++        return surName;
++    }
++
++    public void setSurName(String surName) {
++        this.surName = surName;
++    }
++
++    public String getFamilyName() {
++        return familyName;
++    }
++
++    public void setFamilyName(String familyName) {
++        this.familyName = familyName;
++    }
++}
+Index: src/main/resources/my_card.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/my_card.txt b/src/main/resources/my_card.txt
+--- a/src/main/resources/my_card.txt	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ b/src/main/resources/my_card.txt	(date 1728839289983)
+@@ -1,0 +1,12 @@
++BASIC
++Vulpix
++70
++FIRE
++-
++1/Smash Kick/10
++W
++-
++1
++Sword & Shield—Fusion Strike
++E
++Zinina/Viktoriya/Olegovna/BSBO-05-23
+\ No newline at end of file
+Index: src/main/java/PokemonStage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/PokemonStage.java b/src/main/java/PokemonStage.java
+new file mode 100644
+--- /dev/null	(date 1729169331246)
++++ b/src/main/java/PokemonStage.java	(date 1729169331246)
+@@ -0,0 +1,27 @@
++public enum PokemonStage {
++    BASIC("BASIC"),
++    STAGE1("STAGE1"),
++    STAGE2("STAGE2"),
++    VSTAR("VSTAR"),
++    VMAX("VMAX");
++
++    private String pokct;
++
++    PokemonStage(String pokct) {
++        this.pokct = pokct;
++    }
++
++    public String getPokct() {
++        return pokct;
++    }
++
++    PokemonStage() {
++    }
++
++    @Override
++    public String toString() {
++        return "PokemonStage{" +
++                "pokct='" + pokct + '\'' +
++                '}';
++    }
++}
+Index: src/main/java/EnergyType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/EnergyType.java b/src/main/java/EnergyType.java
+new file mode 100644
+--- /dev/null	(date 1729166534574)
++++ b/src/main/java/EnergyType.java	(date 1729166534574)
+@@ -0,0 +1,47 @@
++public enum EnergyType {
++    FIRE("F"),
++    GRASS("G"),
++    WATER("W"),
++    LIGHTNING("L"),
++    PHYSIC("P"),
++    FIGHTING("H"),
++    DARKNESS("D"),
++    METAL("M"),
++    FAIRY("F"),
++    DRAGON("D"),
++    COLORLESS("C");
++
++    private String enty;
++
++    private char symbol;
++
++    EnergyType(char symbol) {
++        this.symbol = symbol;
++    }
++
++    public char getSymbol() {
++        return symbol;
++    }
++
++    public static EnergyType fromString(String str) {
++        for (EnergyType type : EnergyType.values()) {
++            if (type.name().equalsIgnoreCase(str) ||
++                    String.valueOf(type.getSymbol()).equalsIgnoreCase(str)) {
++                return type;
++            }
++        }
++        return null; // или выбросьте исключение
++    }
++    EnergyType(String enty) {
++        this.enty = enty;
++    }
++
++    public String getEnty() {
++        return enty;
++    }
++
++    @Override
++    public String toString() {
++        return enty;
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f5b837c1-88fc-4723-a790-86c45fa97d5a\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 2\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"2nOFYCZNvmgopluJvqNzKLmy90f\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"onboarding.tips.debug.path\": \"C:/Users/zinin/IdeaProjects/Pkmn/src/main/java/ru/mirea/zininavo/Main.java\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f5b837c1-88fc-4723-a790-86c45fa97d5a\" name=\"Changes\" comment=\"\" />\r\n      <created>1728836267090</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1728836267090</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/Main.java</url>\r\n          <line>13</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c011fce175c34c4ad31be8f5056541e7e9102824)
++++ b/.idea/workspace.xml	(date 1729166666802)
+@@ -1,15 +1,62 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f5b837c1-88fc-4723-a790-86c45fa97d5a" name="Changes" comment="" />
++    <list default="true" id="f5b837c1-88fc-4723-a790-86c45fa97d5a" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/src/main/java/AttackSkill.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/Card.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/CardImport.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/EnergyType.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/PkmnApplication.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/PokemonStage.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/Student.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mirea/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/AttackSkill.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/Card.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/CardImport.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/EnergyType.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/PkmnApplication.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/PokemonStage.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/pkmn/Student.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/my_card.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/my_card.txt" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 2
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Enum" />
++        <option value="Class" />
++        <option value="JUnit5 Test Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "noermoan"
++  }
+ }]]></component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/noermoan/Pkmn.git",
++    "accountId": "ac6ded97-3e7b-41d1-b286-0674be8a9ed7"
++  }
++}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 2
++}</component>
+   <component name="ProjectId" id="2nOFYCZNvmgopluJvqNzKLmy90f" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+@@ -18,11 +65,35 @@
+   </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
++    "Application.Card.executor": "Run",
++    "Application.CardImport.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
++    "git-widget-placeholder": "master",
+     "kotlin-language-version-configured": "true",
+-    "onboarding.tips.debug.path": "C:/Users/zinin/IdeaProjects/Pkmn/src/main/java/ru/mirea/zininavo/Main.java"
++    "onboarding.tips.debug.path": "C:/Users/zinin/IdeaProjects/Pkmn/src/main/java/ru/mirea/zininavo/Main.java",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0",
++    "settings.editor.selected.configurable": "preferences.lookFeel"
+   }
+ }]]></component>
++  <component name="RecentsManager">
++    <key name="CreateClassDialog.RecentsKey">
++      <recent name="ru.mirea.zininavo.pkmn" />
++    </key>
++    <key name="CreateTestDialog.Recents.Supers">
++      <recent name="" />
++    </key>
++    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
++      <recent name="" />
++    </key>
++    <key name="CreateTestDialog.RecentsKey">
++      <recent name="ru.mirea.zininavo.pkmn" />
++    </key>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -38,7 +109,7 @@
+     <breakpoint-manager>
+       <breakpoints>
+         <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/ru/mirea/zininavo/Main.java</url>
++          <url>file://$PROJECT_DIR$/src/main/java/ru/mirea/Main.java</url>
+           <line>13</line>
+           <option name="timeStamp" value="1" />
+         </line-breakpoint>
+Index: src/main/java/CardImport.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/CardImport.java b/src/main/java/CardImport.java
+new file mode 100644
+--- /dev/null	(date 1729171031219)
++++ b/src/main/java/CardImport.java	(date 1729171031219)
+@@ -0,0 +1,120 @@
++import java.io.BufferedReader;
++import java.io.FileReader;
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.List;
++
++public class CardImport {
++    public static void main(String[] args) {
++        String path = "src/main/resources/my_card.txt";
++
++        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
++            String line;
++            while ((line = br.readLine()) != null) {
++
++                //1 stage
++                Card card = new Card();
++                card.setPokemonStage(PokemonStage.valueOf(br.readLine().trim()));
++                // 2 name
++                line = br.readLine();
++                if (line != null) card.setName(line.trim());
++                // 3 hp
++                line = br.readLine();
++                if (line != null) card.setHp(Integer.parseInt(line.trim()));
++                // 4 type
++                line = br.readLine();
++                if (line != null) {
++                    try {
++                        card.setPokemonType(EnergyType.valueOf(line.trim()));
++                    } catch (IllegalArgumentException e) {
++                        System.err.println("Некорректный тип энергии: " + line);
++                    }
++                }
++                //5 evolves from
++                if (br.readLine().equals("-")){
++                    card.setEvolvesFrom(null);
++                }
++                //6 skills
++                String at = br.readLine();
++                List<AttackSkill> skills = new ArrayList<>();
++                String[] attackPart = at.split("/");
++                if (attackPart.length == 3) {
++                    String name = attackPart[1];
++                    Integer cost = Integer.valueOf(attackPart[0]);
++                    Integer damage = Integer.valueOf(attackPart[2]);
++                }
++                card.setSkills(skills);
++
++                // 7 weakness
++                line = br.readLine();
++                if (line != null) {
++                    EnergyType energyType = EnergyType.fromString(line.trim());
++                    if (energyType != null) {
++                        card.setWeaknessType(energyType);
++                    } else {
++                        System.out.println("Неверный тип энергии.");
++                    }
++                }
++
++                // 8 resistance type
++                line = br.readLine();
++                if (line != null) {
++                    String energyTypeString = line.trim();
++                    if ("-".equals(energyTypeString)) {
++                        card.setResistanceType(null);
++                    } else {
++                        try {
++                            card.setResistanceType(EnergyType.valueOf(energyTypeString));
++                        } catch (IllegalArgumentException e) {
++                            System.err.println("Некорректный тип энергии: " + energyTypeString);
++                        }
++                    }
++                }
++
++                // 9 retreat cost
++                line = br.readLine();
++                if (line != null) card.setRetreatCost(line.trim());
++
++                // 10 card set
++                line = br.readLine();
++                if (line != null) card.setGameSet(line.trim());
++
++                // 11 legality
++                line = br.readLine();
++                if (line != null && line.length() == 1) {
++                    card.setRegulationMark(line.charAt(0));
++                }
++                //12 владелец
++                Student student = new Student();
++                String nm = br.readLine().toString();
++                String[] stdPt = nm.split("/");
++                if (stdPt.length == 4) {
++                    student.setFirstName(stdPt[0]);
++                    student.setSurName(stdPt[1]);
++                    student.setFamilyName(stdPt[2]);
++                    student.setGroup(stdPt[3]);
++                }
++                System.out.println(card.toString());
++            }
++        } catch (IOException e) {
++            e.printStackTrace();
++        } catch (NumberFormatException e) {
++            System.out.println("Ошибка формата числа: " + e.getMessage());
++        }
++        ;
++        // Вывод информации о картах
++        /*for (Card card : cards) {
++            System.out.println("Stage: " + card.getPokemonStage());
++            System.out.println("Name: " + card.getName());
++            System.out.println("HP: " + card.getHp());
++            System.out.println("Type: " + card.getPokemonType());
++            System.out.println("Skills: " + card.getSkills());
++            System.out.println("Weakness Type: " + card.getWeaknessType());
++            System.out.println("Resistance Type: " + card.getResistanceType());
++            System.out.println("Card Set: " + card.getGameSet());
++            System.out.println("Legality: " + card.getRegulationMark());
++            System.out.println("Owner: " + card.getPokemonOwner());
++            System.out.println("-------------------");
++        }*/
++    }
++}
+Index: src/main/java/Card.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Card.java b/src/main/java/Card.java
+new file mode 100644
+--- /dev/null	(date 1729166534675)
++++ b/src/main/java/Card.java	(date 1729166534675)
+@@ -0,0 +1,165 @@
++import java.io.Serializable;
++import java.util.List;
++
++public class Card implements Serializable {
++    private static final long serialVersionUID = 1L;
++    PokemonStage pokemonStage;
++    String name;
++    Integer hp;
++    EnergyType pokemonType;
++    Card evolvesFrom;
++    List<AttackSkill> skills;
++    EnergyType weaknessType;
++    EnergyType resistanceType;
++    String retreatCost;
++    String gameSet;
++    Character regulationMark;
++    Student pokemonOwner;
++
++    public Card() {
++    }
++
++    public Card(PokemonStage pokemonStage,
++                String name, int hp,
++                EnergyType pokemonType,
++                Card evolvesFrom,
++                List<AttackSkill> skills,
++                EnergyType weaknessType,
++                EnergyType resistanceType,
++                String retreatCost,
++                String gameSet,
++                char regulationMark,
++                Student pokemonOwner) {
++        this.pokemonStage = pokemonStage;
++        this.name = name;
++        this.hp = hp;
++        this.pokemonType = pokemonType;
++        this.evolvesFrom = evolvesFrom;
++        this.skills = skills;
++        this.weaknessType = weaknessType;
++        this.resistanceType = resistanceType;
++        this.retreatCost = retreatCost;
++        this.gameSet = gameSet;
++        this.regulationMark = regulationMark;
++        this.pokemonOwner = pokemonOwner;
++    }
++
++    public PokemonStage getPokemonStage() {
++        return pokemonStage;
++    }
++
++    public void setPokemonStage(PokemonStage pokemonStage) {
++        this.pokemonStage = pokemonStage;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public Integer getHp() {
++        return hp;
++    }
++
++    public void setHp(Integer hp) {
++        this.hp = hp;
++    }
++
++    public EnergyType getPokemonType() {
++        return pokemonType;
++    }
++
++    public void setPokemonType(EnergyType pokemonType) {
++        this.pokemonType = pokemonType;
++    }
++
++    public Card getEvolvesFrom() {
++        return evolvesFrom;
++    }
++
++    public void setEvolvesFrom(Card evolvesFrom) {
++        this.evolvesFrom = evolvesFrom;
++    }
++
++    public List<AttackSkill> getSkills() {
++        return skills;
++    }
++
++    public void setSkills(List<AttackSkill> skills) {
++        this.skills = skills;
++    }
++
++    public EnergyType getWeaknessType() {
++        return weaknessType;
++    }
++
++    public void setWeaknessType(EnergyType weaknessType) {
++        this.weaknessType = weaknessType;
++    }
++
++    public EnergyType getResistanceType() {
++        return resistanceType;
++    }
++
++    public void setResistanceType(EnergyType resistanceType) {
++        this.resistanceType = resistanceType;
++    }
++
++    public String getRetreatCost() {
++        return retreatCost;
++    }
++
++    public void setRetreatCost(String retreatCost) {
++        this.retreatCost = retreatCost;
++    }
++
++    public String getGameSet() {
++        return gameSet;
++    }
++
++    public void setGameSet(String gameSet) {
++        this.gameSet = gameSet;
++    }
++
++    public Character getRegulationMark() {
++        return regulationMark;
++    }
++
++    public void setRegulationMark(Character regulationMark) {
++        this.regulationMark = regulationMark;
++    }
++
++    public Student getPokemonOwner() {
++        return pokemonOwner;
++    }
++
++    public void setPokemonOwner(Student pokemonOwner) {
++        this.pokemonOwner = pokemonOwner;
++    }
++
++    @Override
++    public String toString() {
++        StringBuilder sb = new StringBuilder();
++        sb.append("Name: ").append(name).append("\n")
++                .append("HP: ").append(hp).append("\n")
++                .append("Type: ").append(pokemonType).append("\n")
++                .append("Evolves From: ").append(evolvesFrom != null ? evolvesFrom : "None").append("\n")
++                .append("Skills: \n");
++
++        for (AttackSkill skill : skills) {
++            sb.append("  - ").append(skill.toString()).append("\n");
++        }
++
++        sb.append("Weakness Type: ").append(weaknessType != null ? weaknessType : "None").append("\n")
++                .append("Resistance Type: ").append(resistanceType != null ? resistanceType : "None").append("n")
++                .append("Retreat Cost: ").append(retreatCost).append("\n")
++                .append("Game Set: ").append(gameSet).append("\n")
++                .append("Regulation Mark: ").append(regulationMark).append("\n")
++                .append("Owner: ").append(pokemonOwner != null ? pokemonOwner.toString() : "None").append("\n");
++
++        return sb.toString();
++    }
++}
